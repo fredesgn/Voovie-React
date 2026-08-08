@@ -7,7 +7,7 @@ function NavBar() {
       <div className="navbar-brand">
         <Link to="/" className="brand-link">
           <img src={logo} alt="Voovie Logo" className="brand-logo" />
-          <span>Voovie</span>
+          <span className="brand-name">Voovie</span>
         </Link>
       </div>
 

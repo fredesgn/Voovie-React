@@ -1,16 +1,67 @@
-# React + Vite
+# Voovie
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A movie discovery web app built with React and the TMDB API. Browse popular movies, search for titles, and bookmark your favorites — saved locally so they're there when you come back.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+-  Browse popular movies (via TMDB)
+-  Search for movies by title
+-  Bookmark/unbookmark movies
+-  Bookmarks persist in `localStorage`
+-  Responsive layout
 
-## React Compiler
+## Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Home
+![Home page](docs/screenshots/home.png)
 
-## Expanding the ESLint configuration
+### Search
+![Search results](docs/screenshots/search.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Bookmarks
+![Bookmarks page](docs/screenshots/bookmarks.png)
+
+## Tech Stack
+
+- [React 19](https://react.dev/)
+- [React Router](https://reactrouter.com/)
+- [Vite](https://vitejs.dev/)
+- [TMDB API](https://www.themoviedb.org/documentation/api)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18+)
+- A free [TMDB API key](https://www.themoviedb.org/settings/api)
+
+### Installation
+
+```bash
+git clone https://github.com/fredesgn/Voovie-React.git
+cd Voovie-React
+npm install
+```
+
+### Environment variables
+
+Copy the example env file and add your TMDB key:
+
+```bash
+cp .env.example .env
+```
+
+Then edit `.env`:
+### Run locally
+
+```bash
+npm run dev
+```
+
+Visit `http://localhost:5173`.
+
+### Build for production
+
+```bash
+npm run build
+```
