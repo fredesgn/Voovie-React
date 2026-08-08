@@ -1,0 +1,85 @@
+.voovie {
+    padding: 2rem 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Search section */
+.search-form {
+    max-width: 700px;
+    margin: 0 auto 2.5rem;
+    display: flex;
+    gap: 1rem;
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.85rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: white;
+    font-size: 1rem;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #e50914;
+}
+
+.search-button {
+    padding: 0.85rem 1.8rem;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-button:hover {
+    background-color: #f40612;
+}
+
+
+/* Movie cards grid */
+.voovies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+/* Responsive */
+@media (max-width: 639px) {
+
+    .voovie {
+        padding: 1rem 0;
+    }
+
+    .search-form {
+        flex-direction: column;
+        margin-bottom: 1.5rem;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+
+    .voovies-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        padding: 1rem;
+        gap: 1rem;
+    }
+}

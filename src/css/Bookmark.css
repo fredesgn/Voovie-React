@@ -1,0 +1,79 @@
+.bookmark {
+    width: 100%;
+    min-height: 80vh;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.bookmark h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+.bookmark-empty {
+    max-width: 500px;
+    margin: 4rem auto;
+    padding: 3rem 2rem;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+}
+
+.bookmark-illustration {
+    width: 220px;
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+    opacity: 0.95;
+}
+
+.bookmark-empty h2 {
+    margin-bottom: 0.75rem;
+    font-size: 2rem;
+    color: #e50914;
+}
+
+.bookmark-empty p {
+    color: #b3b3b3;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* Animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.bookmark-illustration {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Movie cards animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.voovies-grid>* {
+    animation: fadeIn 0.3s ease-out forwards;
+}
