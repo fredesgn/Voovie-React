@@ -1,25 +1,30 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/Voovie.svg";
-
+import "../css/Navbar.css";
 function NavBar() {
   return (
-    <div className="navbar">
-      <div className="navbar-brand">
-        <Link to="/" className="brand-link">
-          <img src={logo} alt="Voovie Logo" className="brand-logo" />
-          <span className="brand-name">Voovie</span>
-        </Link>
-      </div>
+    <header className="navbar">
+      <NavLink to="/" className="navbar-brand" end>
+        <img src={logo} alt="Voovie Logo" className="brand-logo" />
+        <span className="brand-name">Voovie</span>
+      </NavLink>
 
-      <div className="navbar-links">
-        <Link to="/" className="nav-link">
+      <nav className="navbar-center">
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) =>
+            isActive ? "nav-link active" : "nav-link"
+          }
+        >
           Home
-        </Link>
-        <Link to="/bookmark" className="nav-link">
-          Bookmark
-        </Link>
-      </div>
-    </div>
+        </NavLink>
+      </nav>
+
+      <NavLink to="/bookmark" className="navbar-cta">
+        Bookmark
+      </NavLink>
+    </header>
   );
 }
 

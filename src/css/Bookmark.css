@@ -17,23 +17,23 @@
     margin: 4rem auto;
     padding: 3rem 2rem;
     text-align: center;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 16px;
-    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .bookmark-illustration {
-    width: 220px;
+    width: 180px;
     max-width: 100%;
-    margin-bottom: 1.5rem;
+    margin: 0 auto 1.5rem;
     opacity: 0.95;
+    display: block;
 }
 
 .bookmark-empty h2 {
     margin-bottom: 0.75rem;
     font-size: 2rem;
-    color: #e50914;
+    color: #FFA500;
 }
 
 .bookmark-empty p {
@@ -44,7 +44,6 @@
     margin: 0 auto;
 }
 
-/* Animation */
 @keyframes float {
 
     0%,
@@ -61,7 +60,6 @@
     animation: float 3s ease-in-out infinite;
 }
 
-/* Movie cards animation */
 @keyframes fadeIn {
     from {
         opacity: 0;

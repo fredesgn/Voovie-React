@@ -30,12 +30,12 @@
 
 .search-input:focus {
     outline: none;
-    box-shadow: 0 0 0 2px #e50914;
+    box-shadow: 0 0 0 2px #FFA500;
 }
 
 .search-button {
     padding: 0.85rem 1.8rem;
-    background-color: #e50914;
+    background-color: #FFA500;
     color: white;
     border: none;
     border-radius: 8px;
@@ -46,22 +46,43 @@
 }
 
 .search-button:hover {
-    background-color: #f40612;
+    background-color: #FFA500;
 }
 
 
-/* Movie cards grid */
+/* Movie cards grid � fixed column counts (not auto-fit) so every
+   row has the same number of equal-width cards, instead of the
+   column count silently changing based on available space. */
 .voovies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     padding: 1rem 2rem;
     width: 100%;
     box-sizing: border-box;
+    align-items: stretch;
+}
+
+.voovies-grid > * {
+    height: 100%;
 }
 
 
 /* Responsive */
+@media (max-width: 1200px) {
+    .voovies-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+        padding: 1rem 1.5rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .voovies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 639px) {
 
     .voovie {
@@ -78,8 +99,14 @@
     }
 
     .voovies-grid {
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         padding: 1rem;
         gap: 1rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .voovies-grid {
+        grid-template-columns: repeat(1, 1fr);
     }
 }

@@ -26,3 +26,18 @@ export const searchMovies = async (query) => {
   const data = await response.json();
   return data.results;
 };
+
+// Runtime, director, producers, and cast aren't in the popular/search
+// results — they live on the single-movie endpoint. append_to_response
+// pulls credits in the same request instead of a second round trip.
+export const getMovieDetails = async (movieId) => {
+  const response = await fetch(
+    `${BASE_URL}/movie/${movieId}?api_key=${API_KEY}&append_to_response=credits`
+  );
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch movie details: ${response.status}`);
+  }
+
+  return response.json();
+};

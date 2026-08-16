@@ -80,4 +80,4 @@ function Home({ bookmarks, toggleBookmark }) {
   );
 }
 
-export default Home;
+export default Home

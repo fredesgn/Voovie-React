@@ -15,7 +15,9 @@ function Bookmark({ bookmarks, toggleBookmark }) {
 
           <h2>No Bookmarks Yet</h2>
 
-          <p>Start adding movies to your bookmarks and they will appear here.</p>
+          <p>
+            Start adding movies to your bookmarks and they will appear here.
+          </p>
         </div>
       ) : (
         <>
