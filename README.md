@@ -13,7 +13,7 @@ A movie discovery web app built with React and the TMDB API. Browse popular movi
 ## Screenshots
 
 ### Demo
-![Demo](./demo/voovie_demo.gif)
+![Demo](./demo/voovie-demo.gif)
 
 
 ## Tech Stack
